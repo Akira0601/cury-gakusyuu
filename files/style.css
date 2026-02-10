@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Meiryo', sans-serif;
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 50%, #e17055 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.title {
+    color: #d63031;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: titleBounce 2s ease-in-out infinite;
+}
+
+@keyframes titleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.fortune-box {
+    background: linear-gradient(135deg, #fff7e6 0%, #ffe8cc 100%);
+    border: 3px dashed #f39c12;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instruction {
+    color: #8b4513;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.fortune-button {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(238, 90, 36, 0.4);
+}
+
+.fortune-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(238, 90, 36, 0.6);
+}
+
+.fortune-button:active {
+    transform: translateY(-1px);
+}
+
+.result-container {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.curry-image {
+    font-size: 100px;
+    margin: 20px 0;
+    animation: curryPop 0.6s ease-out;
+}
+
+@keyframes curryPop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.curry-name {
+    color: #d63031;
+    font-size: 26px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.curry-comment {
+    color: #6c5ce7;
+    font-size: 16px;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #e8f5ff 0%, #d9e9ff 100%);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 5px solid #6c5ce7;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+    
+    .title {
+        font-size: 22px;
+    }
+    
+    .curry-image {
+        font-size: 80px;
+    }
+    
+    .fortune-button {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+}
